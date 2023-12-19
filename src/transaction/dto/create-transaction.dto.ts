@@ -1,3 +1,9 @@
 export class CreateTransactionDto {
-  responsible_user_id: number;
+  _embedded: {
+    contacts: [
+      {
+        id: number;
+      },
+    ];
+  };
 }

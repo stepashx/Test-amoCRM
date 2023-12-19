@@ -10,10 +10,16 @@ export class TransactionService {
     private httpAmoCrmService: HttpAmoCrmService,
     private authService: AuthService,
   ) {}
-  async create(contact_id: number) {
+  async create(contactId: number) {
     const body: CreateTransactionDto[] = [
       {
-        responsible_user_id: contact_id,
+        _embedded: {
+          contacts: [
+            {
+              id: contactId,
+            },
+          ],
+        },
       },
     ];
     const config = await this.authService.getConfig();

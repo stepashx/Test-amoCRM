@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
-import { firstValueFrom } from 'rxjs';
+import { firstValueFrom, map } from 'rxjs';
 import { QueryParamDto } from './dto/query-param.dto';
 import { AxiosRequestConfig } from 'axios';
+import { response } from 'express';
 
 @Injectable()
 export class HttpAmoCrmService {
