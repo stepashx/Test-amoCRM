@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { HttpModule } from '@nestjs/axios';
+import { HttpAmoCrmModule } from '../http-amo-crm/http-amo-crm.module';
 
 @Module({
-  imports: [HttpModule],
+  imports: [HttpAmoCrmModule],
   providers: [AuthService],
   exports: [AuthService],
 })

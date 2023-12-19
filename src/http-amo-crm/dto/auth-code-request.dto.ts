@@ -1,4 +1,4 @@
-export class PostAuthCodeRequestDto {
+export class AuthCodeRequestDto {
   client_id: string;
   client_secret: string;
   grant_type: string;

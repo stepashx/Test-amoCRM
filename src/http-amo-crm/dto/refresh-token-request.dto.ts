@@ -1,4 +1,4 @@
-export class PostRefreshTokenRequestDto {
+export class RefreshTokenRequestDto {
   client_id: string;
   client_secret: string;
   grant_type: string;
